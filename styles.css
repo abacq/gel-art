@@ -506,21 +506,21 @@ footer {
     width: 100%;
     min-height: 100px;
     max-width: 500px;
-    background: #232526;
-    color: #e0e0e0;
-    border: 1.5px solid #06c167;
-    border-radius: 16px;
+    background: #fff;
+    color: #232526;
+    border: 1px solid #b0b0b0;
+    border-radius: 6px;
     padding: 1rem;
     font-size: 1.1rem;
     margin-bottom: 1.2rem;
     resize: vertical;
-    box-shadow: 0 2px 8px rgba(6,193,103,0.08);
+    box-shadow: none;
     transition: border 0.2s;
 }
 
 .email-textarea:focus {
     outline: none;
-    border: 1.5px solid #fff;
+    border: 1px solid #06c167;
 }
 
 .email-send-btn {
