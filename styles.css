@@ -1,0 +1,464 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #e0e0e0;
+    background: linear-gradient(135deg, #181818 0%, #232526 100%);
+}
+
+/* Header and Navigation */
+header {
+    background-color: rgba(10, 10, 10, 0.95);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #1a1a1a;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: 300;
+    color: #ffffff;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #b0b0b0;
+    font-weight: 300;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.nav-links a:hover {
+    color: #ffffff;
+}
+
+.lang-switcher {
+    margin-left: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.lang-btn {
+    background: none;
+    border: none;
+    color: #b0b0b0;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 0.2rem 0.5rem;
+    transition: color 0.2s;
+}
+
+.lang-btn.active,
+.lang-btn:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+    height: auto;
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 7rem 1rem 2rem 1rem;
+    background: linear-gradient(135deg, #181818 0%, #232526 100%);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.hero::before {
+    display: none;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+    font-weight: 300;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.hero p {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    color: #b0b0b0;
+    font-weight: 300;
+    position: relative;
+}
+
+.opening-hours {
+    font-size: 1.2rem;
+    color: #808080;
+    margin-top: 1rem;
+    position: relative;
+}
+
+/* Sections */
+section {
+    padding: 5rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #0a0a0a;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #ffffff;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    position: relative;
+}
+
+section h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 1px;
+    background-color: #333;
+    margin: 1rem auto;
+}
+
+/* Flavors Section */
+.service-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.card {
+    background: #111111;
+    padding: 2rem;
+    border-radius: 0;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+    text-align: center;
+    border: 1px solid #1a1a1a;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #333;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+}
+
+.card h3 {
+    color: #ffffff;
+    margin-bottom: 1rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.card p {
+    color: #808080;
+}
+
+/* Contact Section */
+.location-info {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 2rem;
+    background-color: #111111;
+    border-radius: 0;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+    border: 1px solid #1a1a1a;
+}
+
+.location-info h3 {
+    color: #ffffff;
+    margin-bottom: 1rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.social-links a {
+    color: #808080;
+    text-decoration: none;
+    font-weight: 300;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.social-links a:hover {
+    color: #ffffff;
+}
+
+/* Footer */
+footer {
+    background-color: #0a0a0a;
+    color: #808080;
+    text-align: center;
+    padding: 2rem;
+    border-top: 1px solid #1a1a1a;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    section {
+        padding: 3rem 1rem;
+    }
+
+    .lang-switcher {
+        margin-left: 0;
+        margin-top: 1rem;
+    }
+}
+
+.image-gallery {
+    display: flex;
+    gap: 2rem;
+    overflow-x: auto;
+    padding: 2rem 2vw 0 2vw;
+    scroll-snap-type: x mandatory;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.gallery-img {
+    height: 340px;
+    width: auto;
+    border-radius: 18px;
+    box-shadow: 0 6px 32px rgba(0,0,0,0.45);
+    object-fit: cover;
+    scroll-snap-align: start;
+    background: #222;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery-img:hover {
+    transform: scale(1.04);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.6);
+}
+
+@media (max-width: 900px) {
+    .gallery-img {
+        height: 200px;
+    }
+}
+
+.reviews-section {
+    background: #181818;
+    padding: 4rem 1rem 3rem 1rem;
+    max-width: 900px;
+    margin: 0 auto 3rem auto;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+}
+
+.reviews-section h2 {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    font-weight: 400;
+}
+
+.global-rating {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+}
+
+.rating-score {
+    color: #ffe066;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.rating-stars {
+    color: #ffe066;
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+}
+
+.rating-count {
+    color: #b0b0b0;
+    font-size: 1rem;
+}
+
+.reviews-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.review {
+    background: #232526;
+    border-radius: 12px;
+    padding: 1.5rem 1.2rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+    color: #e0e0e0;
+}
+
+.review-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.7rem;
+    font-size: 1.05rem;
+}
+
+.reviewer {
+    font-weight: bold;
+    color: #fff;
+}
+
+.review-score {
+    color: #ffe066;
+    font-weight: 600;
+}
+
+.review-date {
+    color: #b0b0b0;
+    font-size: 0.95rem;
+}
+
+.review-text {
+    font-size: 1.08rem;
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+.ubereats-section {
+    background: #181818;
+    padding: 3rem 1rem 2.5rem 1rem;
+    max-width: 900px;
+    margin: 0 auto 2.5rem auto;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+    text-align: center;
+}
+
+.ubereats-section h2 {
+    color: #fff;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: 2px;
+    font-weight: 400;
+}
+
+.ubereats-btn {
+    display: inline-block;
+    background: #06c167;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 0.9rem 2.2rem;
+    border-radius: 32px;
+    text-decoration: none;
+    box-shadow: 0 2px 12px rgba(6,193,103,0.18);
+    transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+    letter-spacing: 1px;
+}
+
+.ubereats-btn:hover {
+    background: #059a52;
+    transform: translateY(-2px) scale(1.04);
+    box-shadow: 0 4px 20px rgba(6,193,103,0.25);
+}
+
+.ubereats-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.ubereats-title {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.ubereats-logo {
+    display: block;
+    max-width: 160px;
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 2px 8px rgba(6,193,103,0.10));
+    transition: transform 0.2s;
+}
+
+.ubereats-logo:hover {
+    transform: scale(1.06);
+}
+
+@media (max-width: 600px) {
+    .ubereats-title {
+        font-size: 1.2rem;
+    }
+    .ubereats-logo {
+        max-width: 100px;
+    }
+    .ubereats-flex {
+        gap: 0.6rem;
+    }
+}
