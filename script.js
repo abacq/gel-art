@@ -76,3 +76,14 @@ if (langEnBtn && langFrBtn) {
     langEnBtn.addEventListener('click', () => switchLanguage('en'));
     langFrBtn.addEventListener('click', () => switchLanguage('fr'));
 }
+
+// Contact email form handler
+const emailForm = document.getElementById('emailForm');
+if (emailForm) {
+    emailForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const message = document.getElementById('emailMessage').value;
+        const mailto = `mailto:gelart@email.com?subject=Order%20or%20Contact%20from%20Website&body=${encodeURIComponent(message)}`;
+        window.location.href = mailto;
+    });
+}
